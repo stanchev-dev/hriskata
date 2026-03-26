@@ -69,14 +69,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (scrollToTopButton) {
-        const toggleScrollButton = () => {
-            const shouldShow = window.scrollY > 350;
-            scrollToTopButton.classList.toggle('is-visible', shouldShow);
-        };
-
-        window.addEventListener('scroll', toggleScrollButton);
-        toggleScrollButton();
-
         scrollToTopButton.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
