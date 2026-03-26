@@ -1,0 +1,610 @@
+/* ===================== */
+/* Reset and Base Styles */
+/* ===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+  background: #f0f0f0; /* Slightly lighter background for better contrast */
+  padding-top: 80px; /* Adjust this value based on the navbar's height */
+}
+
+/* ===================== */
+/* Navbar Styles */
+/* ===================== */
+/* [Existing Navbar CSS remains unchanged] */
+.navbar {
+  width: 100%;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 0.75rem 1.5rem;
+  position: fixed; /* Fix the navbar at the top */
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Ensure navbar stays above other elements */
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  background-color: #f8f8f8; /* Slight background change on hover */
+}
+
+/* Navbar Container */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Brand or Logo Styles */
+.brand a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.brand a:hover {
+  color: #007BFF;
+}
+
+/* Hamburger Icon Styles */
+.hamburger {
+  display: none; /* Hidden by default; shown on smaller screens */
+  cursor: pointer;
+}
+
+.hamburger .material-icons {
+  font-size: 28px;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.hamburger:hover .material-icons {
+  color: #007BFF;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Center the nav links horizontally */
+  gap: 1rem;
+  margin-left: auto;
+  list-style: none; /* Remove bullets from main navigation */
+}
+
+/* Navigation Links - Individual Items */
+.nav-link {
+  position: relative; /* For dropdown positioning */
+}
+
+.nav-link a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  display: flex;
+  align-items: center; /* Vertically center the content */
+}
+
+.nav-link a:hover {
+  color: #007BFF; /* Primary color on hover */
+  background-color: rgba(0, 123, 255, 0.1); /* Subtle background on hover */
+  border-radius: 4px;
+}
+
+/* Dropdown Menu Styles */
+.services:hover .drop-down {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(10px);
+}
+
+.drop-down {
+  position: absolute;
+  top: 100%;
+  transform: translateX(-50%) translateY(20px);
+  background: #ffffff;
+  color: #333;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-top: 0.5rem;
+  min-width: 150px;
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+  list-style: none; /* Remove bullets from dropdown */
+}
+
+.drop-down li {
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+  list-style: none; /* Ensure no bullets */
+}
+
+.drop-down li a {
+  color: inherit; /* Inherit text color */
+  text-decoration: none;
+  display: block;
+}
+
+.drop-down li:hover {
+
+  border-radius: 4px;
+}
+
+/* Dropdown Icon */
+.dropdown-icon {
+  margin-left: 0.25rem;
+  transition: transform 0.3s ease;
+}
+
+.services:hover .dropdown-icon {
+  transform: rotate(180deg);
+}
+
+/* ===================== */
+/* Hero Section Styles */
+/* ===================== */
+.hero {
+    background: url('../hero2.jpg') no-repeat center center; /* Replace with your hero image */
+    background-size: cover; /* Ensures the image covers the entire section */
+    width: 100%;
+    height: 80vh; /* Adjust height as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    color: #ffffff;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay for better text readability */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.hero .btn {
+    padding: 0.75rem 2rem;
+    background-color: #007BFF;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.hero .btn:hover {
+    background-color: #007BFF;
+}
+
+/* ===================== */
+/* Features Section Styles */
+/* ===================== */
+.features {
+    background: #ffffff;
+    padding: 4rem 2rem;
+}
+
+.features h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #333333;
+}
+
+.features-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.feature {
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 30%;
+    min-width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.feature .material-icons {
+    font-size: 3rem;
+    color: #007BFF;
+    margin-bottom: 1rem;
+}
+
+.feature h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333333;
+}
+
+.feature p {
+    font-size: 1rem;
+    color: #666666;
+}
+
+/* ===================== */
+/* About Section Styles */
+/* ===================== */
+.about {
+    background: #f0f0f0;
+    padding: 4rem 2rem;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.about-image {
+    flex: 1;
+    max-width: 500px;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333333;
+}
+
+.about-text p {
+    font-size: 1rem;
+    color: #666666;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+/*
+.about-logo {
+    width: 50px; /* Adjust size as needed 
+    height: 120px;
+    margin-top: 1rem;
+}
+*/
+
+/* ===================== */
+/* Testimonials Section Styles */
+/* ===================== */
+.testimonials {
+    background: #ffffff;
+    padding: 4rem 2rem;
+}
+
+.testimonials h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #333333;
+}
+
+.testimonials-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.testimonial {
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 30%;
+    min-width: 250px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial p {
+    font-size: 1rem;
+    color: #666666;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+
+.testimonial h4 {
+    font-size: 1.2rem;
+    color: #333333;
+    text-align: right;
+}
+
+/* ===================== */
+/* Footer Styles */
+/* ===================== */
+.footer {
+    background: #222222;
+    color: #ffffff;
+    padding: 4rem 2rem;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-brand a {
+    display: block;
+}
+
+.footer-logo {
+    width: 150px; /* Adjust size as needed */
+    height: auto;
+}
+
+.footer-links {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #007BFF;
+}
+
+.footer-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.footer-social a {
+    color: #ffffff;
+    font-size: 2rem;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: #007BFF;
+}
+
+.footer-newsletter {
+    text-align: center;
+}
+
+.footer-newsletter h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.footer-newsletter form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer-newsletter input[type="email"] {
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 4px;
+    width: 250px;
+    max-width: 100%;
+    font-size: 1rem;
+}
+
+.footer-newsletter button {
+    padding: 0.75rem 2rem;
+    background-color: #007BFF;
+    color: #ffffff;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top:10px;
+}
+
+.footer-newsletter button:hover {
+    background-color: #007BFF;
+}
+
+.footer-copy {
+    font-size: 0.9rem;
+    color: #aaaaaa;
+    text-align: center;
+}
+
+/* ===================== */
+/* Responsive Design */
+/* ===================== */
+@media (max-width: 768px) {
+    /* Show hamburger on smaller screens */
+    .hamburger {
+        display: block;
+    }
+
+    /* Hide navigation links by default on smaller screens */
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #ffffff;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem 0;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        list-style: none; /* Remove bullets from mobile menu */
+    }
+
+    /* Show navigation links when active */
+    .nav-links.active {
+        max-height: 500px; /* Arbitrary large value to allow the menu to expand */
+    }
+
+    /* Adjust dropdown positioning for mobile */
+    .drop-down {
+        position: static;
+        transform: translateY(0);
+        box-shadow: none;
+        border-radius: 0;
+        margin-top: 0;
+        min-width: 100%;
+        list-style: none; /* Remove bullets */
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease, opacity 0.3s ease;
+    }
+
+    /* Show dropdown when active */
+    .services.active .drop-down {
+        max-height: 300px; /* Arbitrary large value to allow the dropdown to expand */
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* Adjust dropdown icon rotation for mobile */
+    .services.active .dropdown-icon {
+        transform: rotate(180deg);
+    }
+
+    /* Ensure "Каталог" aligns with other links */
+    .nav-links .nav-link {
+        width: 100%;
+        text-align: center;
+        margin-left:50px;
+    }
+
+    .nav-links .nav-link a {
+        width: 100%;
+        padding: 0.75rem 0;
+        border-radius: 0;
+    }
+
+    /* Adjust Hero Section for Mobile */
+    .hero {
+        height: 60vh;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .features-container, .testimonials-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature, .testimonial {
+        width: 80%;
+    }
+
+    .about-container {
+        flex-direction: column;
+    }
+
+    .about-logo {
+        width: 120px;
+    }
+
+    .footer-container {
+        gap: 1rem;
+    }
+
+    .footer-newsletter input[type="email"] {
+        width: 200px;
+    }
+
+    .footer-newsletter button {
+        width: 150px;
+    }
+}
+
+/* ===================== */
+/* Focus Styles for Accessibility */
+/* ===================== */
+.footer-links a:focus,
+.footer-social a:focus,
+.nav-link a:focus,
+.hamburger:focus,
+.btn:focus,
+.footer-newsletter button:focus,
+.footer-newsletter input[type="email"]:focus {
+    outline: 2px solid #007BFF;
+
+    outline-offset: 2px;
+}
+
+.navbar a:focus {
+  outline: none;
+}
+
+.navbar a:focus-visible {
+  outline: 2px solid #007BFF;
+  outline-offset: 4px;
+}

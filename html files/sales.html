@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин за велосипеди и всичко с тях</title>
+    <link rel="stylesheet" href="../css files/sales.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+   
+    <link rel="icon" href="../Title (1).png" type="image/x-icon">
+    <meta name="description" content="CROSS BMX - Вашият най-добър футболен магазин с широка гама от продукти и услуги.">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <nav class="navbar" aria-label="Main Navigation">
+        <div class="navbar-container">
+            
+            <div class="brand">
+                <a href="#">
+                    CROSS BMX
+                </a>
+            </div>
+
+            
+            <div class="hamburger" id="hamburger" aria-label="Toggle Navigation" aria-expanded="false" role="button" tabindex="0">
+                <span class="material-icons">menu</span>
+            </div>
+
+            
+            <ul class="nav-links" id="nav-links">
+                <li class="nav-link">
+                    <a href="../html files/index.html">Начало</a>
+                </li>
+                <li class="nav-link services">
+                    <a href="../html files/catalog.html" aria-haspopup="true" aria-expanded="false">
+                        Каталог
+                        <span class="material-icons dropdown-icon">arrow_drop_down</span>
+                    </a>
+                    <ul class="drop-down" aria-label="Каталог Submenu">
+                        <li><a href="../html files/sales.html">Продажби</a></li>
+                        <li><a href="../html files/promotions.html">Промоции</a></li>
+                    </ul>
+                </li>
+                <li class="nav-link">
+                    <a href="../html files/contacts.html">Контакти</a>
+                </li>
+                <li class="nav-link">
+                    <a href="../html files/author.html">За автора</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+  <header>
+    <h1>Преглед на годишните продажби</h1>
+  </header>
+  
+  <main>
+    <h2>Продажби от 2015 до 2026</h2>
+    <div class="chart-container">
+      <canvas id="salesChart"></canvas>
+    </div>
+    <section class="chart-analysis">
+        <h3>Анализ на продажбите</h3>
+        <p>
+          От представената диаграма може да се види стабилен и постоянен растеж на продажбите от 2015 г. до 2026 г. През 2015 г. Продажбите са били около 15 000 евро, а през 2026 г. се очаква да достигнат около 70 000 евро. Това показва средно годишно увеличение с около 10-20%, което е резултат от качествени велосипедни продукти, успешни маркетингови кампании и нарастващо доверие от страна на клиентите. Тези данни потвърждават, че магазинът се развива успешно и се адаптира към нуждите на пазара.
+        </p>
+      </section>
+  </main>
+  <footer class="footer">
+    <div class="footer-container">
+        
+        <div class="footer-brand">
+
+        
+        
+        <div class="footer-links">
+            <a href="../html files/index.html">Начало</a>
+            <a href="../html files/catalog.html">Каталог</a>
+            <a href="../html files/contacts.html">Контакти</a>
+            <a href="../html files/author.html">За автора</a>
+        </div>
+        
+        
+        <div class="footer-social">
+            <a href="https://www.facebook.com/" aria-label="Facebook">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://x.com/?mx=2" aria-label="Twitter">
+                <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com/" aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.youtube.com/" aria-label="YouTube">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+        </div>
+        
+       
+        <div class="footer-newsletter">
+            <h3>Абонирай се за нашия бюлетин</h3>
+            <form action="#" method="POST">
+                <input type="email" name="email" placeholder="Вашият имейл" required>
+                <button type="submit">Абонирай се</button>
+            </form>
+        </div>
+        
+        
+        
+    </div>
+</footer>
+
+  
+  <script>
+    const ctx = document.getElementById('salesChart').getContext('2d');
+    const salesChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025', "2026"],
+        datasets: [{
+          label: 'Годишни продажби (в евро)',
+          data: [15000, 18000, 21000, 25000, 30000, 35000, 40000, 45000, 50000, 55000, 60000, 70000],
+          borderColor: 'rgba(75, 192, 192, 1)',
+          backgroundColor: 'rgba(75, 192, 192, 0.2)',
+          fill: true,
+          tension: 0.3,
+          pointRadius: 5,
+          pointBackgroundColor: 'rgba(75, 192, 192, 1)'
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: {
+              callback: function(value) {
+                return value + ' евро';
+              }
+            }
+          }
+        }
+      }    });
+  </script>
+        <script src="../js files/navbar.js"></script>
+        <script src="https://kit.fontawesome.com/c0669ad8a0.js" crossorigin="anonymous"></script>
+</body>
+</html>

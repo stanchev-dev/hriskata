@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакти - CROSS BMX Футболен магазин</title>
+    <link rel="stylesheet" href="../css files/contacts.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    
+    <nav class="navbar" aria-label="Main Navigation">
+        <div class="navbar-container">
+           
+            <div class="brand">
+                <a href="../html files/index.html">
+                    CROSS BMX
+                </a>
+            </div>
+
+            
+            <div class="hamburger" id="hamburger" aria-label="Toggle Navigation" aria-expanded="false" role="button" tabindex="0">
+                <span class="material-icons">menu</span>
+            </div>
+
+            
+            <ul class="nav-links" id="nav-links">
+                <li class="nav-link">
+                    <a href="../html files/index.html">Начало</a>
+                </li>
+                <li class="nav-link services">
+                    <a href="../html files/catalog.html" aria-haspopup="true" aria-expanded="false">
+                        Каталог
+                        <span class="material-icons dropdown-icon">arrow_drop_down</span>
+                    </a>
+                    <ul class="drop-down" aria-label="Каталог Submenu">
+                        <li><a href="../html files/sales.html">Продажби</a></li>
+                        <li><a href="../html files/promotions.html">Промоции</a></li>
+                    </ul>
+                </li>
+                <li class="nav-link">
+                    <a href="../html files/contacts.html">Контакти</a>
+                </li>
+                <li class="nav-link">
+                    <a href="../html files/author.html">За автора</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    
+    <main class="contact-container">
+        <h2>Свържете се с нас</h2>
+        <p>Имате въпроси? Попълнете формата или се свържете с нас чрез социалните мрежи.</p>
+
+        <div class="contact-content">
+            
+            <form id="contact-form">
+                <label for="name">Име</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Имейл</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Съобщение</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Изпрати</button>
+            </form>
+
+            
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.1809115838705!2d24.740542899999998!3d42.1423846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14acd1b7a417cc81%3A0x9a12a142d739a79e!2sHalm%20Na%20OsvoboditelitePlovdiv%20Center%2C%20bul.%20Ruski%2050%2C%204000%20Plovdiv!5e1!3m2!1sen!2sbg!4v1739105145507!5m2!1sen!2sbg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+
+        
+        <div class="social-links">
+            <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i> Facebook</a>
+            <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a>
+            <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i> Twitter</a>
+        </div>
+    </main>
+
+  
+    <footer class="footer">
+        <div class="footer-container">
+            
+            <div class="footer-brand">
+
+            
+           
+            <div class="footer-links">
+                <a href="../html files/index.html">Начало</a>
+                <a href="../html files/catalog.html">Каталог</a>
+                <a href="../html files/contacts.html">Контакти</a>
+                <a href="../html files/author.html">За автора</a>
+            </div>
+            
+            
+            <div class="footer-social">
+                <a href="https://www.facebook.com/" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="https://x.com/?mx=2" aria-label="Twitter">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com/" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://www.youtube.com/" aria-label="YouTube">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+            </div>
+            
+           
+            <div class="footer-newsletter">
+                <h3>Абонирай се за нашия бюлетин</h3>
+                <form action="#" method="POST">
+                    <input type="email" name="email" placeholder="Вашият имейл" required>
+                    <button type="submit">Абонирай се</button>
+                </form>
+            </div>
+            
+            
+            
+        </div>
+    </footer>
+
+    
+     <script src="../js files/navbar.js"></script>
+    <script src="../js files/contacts.js"></script>
+    <script src="https://kit.fontawesome.com/c0669ad8a0.js" crossorigin="anonymous"></script>
+</body>
+</html>
