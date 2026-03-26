@@ -1,6 +1,6 @@
-/* promotions.css */
 
-/* 1. Reset Default Browser Styles */
+
+
 * {
     box-sizing: border-box;
 }
@@ -14,48 +14,48 @@ ul {
     list-style: none;
 }
 
-/* 2. Set html and body to full height */
+
 html, body {
     height: 100%;
     margin: 0;
     padding: 0;
 }
 
-/* 3. Flexbox Layout for body */
+
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Ensures the body covers the full viewport height */
+    min-height: 100vh;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    background-color: #f4f4f4; /* Light background for the page */
+    background-color: #f4f4f4;
 }
 
-/* 4. Navbar Styles */
+
 .navbar {
     width: 100%;
     background: #ffffff;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     padding: 0.75rem 1.5rem;
-    position: fixed; /* Fix the navbar at the top */
+    position: fixed;
     top: 0;
     left: 0;
-    z-index: 1000; /* Ensure navbar stays above other elements */
+    z-index: 1000;
     transition: box-shadow 0.3s ease, background-color 0.3s ease;
   }
-  
+
   .navbar:hover {
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-    background-color: #f8f8f8; /* Slight background change on hover */
+    background-color: #f8f8f8;
   }
-  
-  /* Navbar Container */
+
+
   .navbar-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  
-  /* Brand or Logo Styles */
+
+
   .brand a {
     text-decoration: none;
     font-size: 1.5rem;
@@ -63,43 +63,43 @@ body {
     color: #333;
     transition: color 0.3s ease;
   }
-  
+
   .brand a:hover {
     color: #007BFF;
   }
-  
-  /* Hamburger Icon Styles */
+
+
   .hamburger {
-    display: none; /* Hidden by default; shown on smaller screens */
+    display: none;
     cursor: pointer;
   }
-  
+
   .hamburger .material-icons {
     font-size: 28px;
     color: #333;
     transition: color 0.3s ease;
   }
-  
+
   .hamburger:hover .material-icons {
     color: #007BFF;
   }
-  
-  /* Navigation Links */
+
+
   .nav-links {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    gap: 1rem;          /* разстояние между линковете */
+    gap: 1rem;
     margin-left: auto;
     list-style: none;
 }
 
-  
-  /* Navigation Links - Individual Items */
+
+
   .nav-link {
-    position: relative; /* For dropdown positioning */
+    position: relative;
   }
-  
+
   .nav-link a {
     text-decoration: none;
     color: #333;
@@ -107,22 +107,22 @@ body {
     padding: 0.5rem 1rem;
     transition: color 0.3s ease, background-color 0.3s ease;
     display: flex;
-    align-items: center; /* Vertically center the content */
+    align-items: center;
   }
-  
+
   .nav-link a:hover {
-    color: #007BFF; /* Primary color on hover */
-    background-color: rgba(0, 123, 255, 0.1); /* Subtle background on hover */
+    color: #007BFF;
+    background-color: rgba(0, 123, 255, 0.1);
     border-radius: 4px;
   }
-  
-  /* Dropdown Menu Styles */
+
+
   .services:hover .drop-down {
     opacity: 1;
     visibility: visible;
     transform: translateX(-50%) translateY(10px);
   }
-  
+
   .drop-down {
     position: absolute;
     top: 100%;
@@ -138,28 +138,28 @@ body {
     opacity: 0;
     visibility: hidden;
     z-index: 1000;
-    list-style: none; /* Remove bullets from dropdown */
+    list-style: none;
   }
-  
+
   .drop-down li {
     padding: 0.75rem 1rem;
     cursor: pointer;
     transition: background 0.3s ease, color 0.3s ease;
-    list-style: none; /* Ensure no bullets */
+    list-style: none;
   }
-  
+
   .drop-down li a {
-    color: inherit; /* Inherit text color */
+    color: inherit;
     text-decoration: none;
     display: block;
   }
-  
+
   .drop-down li:hover {
-  
+
     border-radius: 4px;
   }
-  
-  /* Dropdown Icon */
+
+
   .dropdown-icon {
     margin-left: 0.25rem;
     transition: transform 0.3s ease;
@@ -168,14 +168,14 @@ body {
 
 
 
-/* 6. Main Content Styles */
+
 main {
   flex: 1;
   padding: 6rem 2rem 2rem;
   background-color: #f4f4f4;
 }
 
-/* 7. Promotions Section */
+
 .promotions {
     max-width: 1200px;
     margin: 0 auto;
@@ -188,23 +188,23 @@ main {
     color: #333333;
 }
 
-/* Promotions Container - 2 Products Per Row */
+
 .promotions-container {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
-    justify-content: center; /* Center the products horizontally */
+    justify-content: center;
 }
 
-/* Promotional Product Card - Larger Size */
+
 .promotions-container .product-card {
-    flex: 0 1 calc(50% - 2rem); /* 2 per row with gap */
+    flex: 0 1 calc(50% - 2rem);
     max-width: calc(50% - 2rem);
     background-color: #ffffff;
-    padding: 2rem; /* Increased padding for larger cards */
+    padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    position: relative; /* For badge positioning */
+    position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -213,15 +213,15 @@ main {
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Product Image */
+
 .promotions-container .product-card .product-image {
-    width: 100%; /* Ensures the image stretches across the container */
-    height: 500px; /* Fixed height */
-    object-fit: cover; /* Ensures the image covers the entire container */
-    border-radius: 8px; /* Optional - to match the product card design */
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 8px;
 }
 
-/* Badge for Promotions */
+
 .badge {
     position: absolute;
     top: 15px;
@@ -234,14 +234,14 @@ main {
     font-weight: bold;
 }
 
-/* Product Name */
+
 .promotions-container .product-card .product-name {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
     color: #333333;
 }
 
-/* Product Price - Old and New */
+
 .product-price {
     font-size: 1.2rem;
     color: #666666;
@@ -259,7 +259,7 @@ main {
     font-weight: bold;
 }
 
-/* Quantity Selector Styles */
+
 .quantity-selector {
     display: flex;
     align-items: center;
@@ -281,9 +281,9 @@ main {
 }
 
 
-/* Buy Button */
+
 .buy-btn {
-    background-color: #007BFF; /* Green color indicating action */
+    background-color: #007BFF;
     color: #ffffff;
     border: none;
     padding: 0.75rem 1.5rem;
@@ -296,22 +296,22 @@ main {
 }
 
 .buy-btn:hover {
-    background-color: #007BFF; /* Darker green on hover */
-    transform: translateY(-2px); /* Slight lift on hover */
+    background-color: #007BFF;
+    transform: translateY(-2px);
 }
 
 .buy-btn:active {
-    background-color: #007BFF; /* Even darker green on click */
-    transform: translateY(0); /* Reset position */
+    background-color: #007BFF;
+    transform: translateY(0);
 }
 
 .buy-btn:focus {
     outline: none;
-    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* Focus ring for accessibility */
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
 }
 
 
-/* 8. Footer Styles */
+
 .footer {
     background: #222222;
     color: #ffffff;
@@ -332,7 +332,7 @@ main {
 }
 
 .footer-logo {
-    width: 150px; /* Adjust size as needed */
+    width: 150px;
     height: auto;
 }
 
@@ -413,7 +413,7 @@ main {
     background-color: #007BFF;
 }
 
-/* 9. Toast Notification Styles */
+
 .toast {
     position: fixed;
     bottom: 20px;
@@ -438,16 +438,16 @@ main {
     font-size: 1rem;
 }
 
-/* 10. Additional Enhancements */
 
-/* Countdown Timer */
+
+
 .countdown-timer {
     margin-top: 1rem;
     font-size: 0.9rem;
     color: #ff4d4d;
 }
 
-/* User Reviews */
+
 .user-reviews {
     margin-top: 1rem;
 }
@@ -473,7 +473,7 @@ main {
     color: #ffcc00;
 }
 
-/* Star Rating */
+
 .stars::before {
     content: "★★★★★";
     letter-spacing: 2px;
@@ -489,7 +489,7 @@ main {
         display: block;
     }
 
-    /* Hide navigation links by default on smaller screens */
+
     .nav-links {
         position: absolute;
         top: 100%;
@@ -505,15 +505,15 @@ main {
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.3s ease;
-        list-style: none; /* Remove bullets from mobile menu */
+        list-style: none;
     }
 
-    /* Show navigation links when active */
+
     .nav-links.active {
-        max-height: 500px; /* Arbitrary large value to allow the menu to expand */
+        max-height: 500px;
     }
 
-    /* Adjust dropdown positioning for mobile */
+
     .drop-down {
         position: static;
         transform: translateY(0);
@@ -521,25 +521,25 @@ main {
         border-radius: 0;
         margin-top: 0;
         min-width: 100%;
-        list-style: none; /* Remove bullets */
+        list-style: none;
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.3s ease, opacity 0.3s ease;
     }
 
-    /* Show dropdown when active */
+
     .services.active .drop-down {
-        max-height: 300px; /* Arbitrary large value to allow the dropdown to expand */
+        max-height: 300px;
         opacity: 1;
         visibility: visible;
     }
 
-    /* Adjust dropdown icon rotation for mobile */
+
     .services.active .dropdown-icon {
         transform: rotate(180deg);
     }
 
-    /* Ensure "Каталог" aligns with other links */
+
     .nav-links .nav-link {
         width: 100%;
         text-align: center;
@@ -550,7 +550,7 @@ main {
         width: 100%;
         padding: 0.75rem 0;
         border-radius: 0;
-    } 
+    }
 
 
     .promotions-container .product-card {
