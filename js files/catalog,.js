@@ -3,7 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const buyButtons = document.querySelectorAll('.buy-btn');
     const searchInput = document.getElementById('search-input');
     const productCards = document.querySelectorAll('.catalog-container .product-card');
+    const filterButtons = document.querySelectorAll('.catalog-filter');
     const catalogContainer = document.querySelector('.catalog-container');
+    let activeCategory = 'all';
 
     const goToCheckout = (product) => {
         localStorage.setItem(CHECKOUT_STORAGE_KEY, JSON.stringify(product));
@@ -41,21 +43,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (searchInput && catalogContainer) {
         const noResultsMessage = document.createElement('p');
+        noResultsMessage.classList.add('catalog-no-results');
         noResultsMessage.textContent = 'Нямаме такъв продукт';
-        noResultsMessage.style.display = 'none';
-        noResultsMessage.style.textAlign = 'center';
-        noResultsMessage.style.color = '#ff4d4d';
-        noResultsMessage.style.fontSize = '1.2rem';
         catalogContainer.appendChild(noResultsMessage);
 
-        searchInput.addEventListener('input', () => {
+        const applyFilters = () => {
             const filter = searchInput.value.toLowerCase();
             let found = false;
 
             productCards.forEach((card) => {
                 const nameText = card.querySelector('.product-name')?.textContent.toLowerCase() ?? '';
                 const descriptionText = card.querySelector('.product-description')?.textContent.toLowerCase() ?? '';
-                const isMatch = nameText.includes(filter) || descriptionText.includes(filter);
+                const category = card.dataset.category ?? '';
+                const matchesSearch = nameText.includes(filter) || descriptionText.includes(filter);
+                const matchesCategory = activeCategory === 'all' || category === activeCategory;
+                const isMatch = matchesSearch && matchesCategory;
 
                 card.style.display = isMatch ? '' : 'none';
                 if (isMatch) {
@@ -64,7 +66,20 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             noResultsMessage.style.display = found ? 'none' : 'block';
+        };
+
+        searchInput.addEventListener('input', applyFilters);
+
+        filterButtons.forEach((button) => {
+            button.addEventListener('click', () => {
+                activeCategory = button.dataset.filter ?? 'all';
+                filterButtons.forEach((btn) => btn.classList.remove('is-active'));
+                button.classList.add('is-active');
+                applyFilters();
+            });
         });
+
+        applyFilters();
     }
 
     const scrollToTopButton = document.getElementById('scroll-to-top-btn');
