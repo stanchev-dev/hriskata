@@ -67,4 +67,17 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    const scrollToTopButton = document.getElementById('scroll-to-top-btn');
+
+    if (scrollToTopButton) {
+        scrollToTopButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            // Fallback for browsers that do not consistently honor smooth scroll on document root.
+            document.documentElement.scrollTop = 0;
+            document.body.scrollTop = 0;
+        });
+    }
+
+
 });
