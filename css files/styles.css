@@ -1,6 +1,6 @@
-/* ===================== */
-/* Reset and Base Styles */
-/* ===================== */
+
+
+
 * {
   margin: 0;
   padding: 0;
@@ -9,39 +9,39 @@
 }
 
 body {
-  background: #f0f0f0; /* Slightly lighter background for better contrast */
-  padding-top: 80px; /* Adjust this value based on the navbar's height */
+  background: #f0f0f0;
+  padding-top: 80px;
 }
 
-/* ===================== */
-/* Navbar Styles */
-/* ===================== */
-/* [Existing Navbar CSS remains unchanged] */
+
+
+
+
 .navbar {
   width: 100%;
   background: #ffffff;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 0.75rem 1.5rem;
-  position: fixed; /* Fix the navbar at the top */
+  position: fixed;
   top: 0;
   left: 0;
-  z-index: 1000; /* Ensure navbar stays above other elements */
+  z-index: 1000;
   transition: box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
 .navbar:hover {
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-  background-color: #f8f8f8; /* Slight background change on hover */
+  background-color: #f8f8f8;
 }
 
-/* Navbar Container */
+
 .navbar-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-/* Brand or Logo Styles */
+
 .brand a {
   text-decoration: none;
   font-size: 1.5rem;
@@ -54,9 +54,9 @@ body {
   color: #007BFF;
 }
 
-/* Hamburger Icon Styles */
+
 .hamburger {
-  display: none; /* Hidden by default; shown on smaller screens */
+  display: none;
   cursor: pointer;
 }
 
@@ -70,19 +70,19 @@ body {
   color: #007BFF;
 }
 
-/* Navigation Links */
+
 .nav-links {
   display: flex;
   align-items: center;
-  justify-content: flex-end; /* Center the nav links horizontally */
+  justify-content: flex-end;
   gap: 1rem;
   margin-left: auto;
-  list-style: none; /* Remove bullets from main navigation */
+  list-style: none;
 }
 
-/* Navigation Links - Individual Items */
+
 .nav-link {
-  position: relative; /* For dropdown positioning */
+  position: relative;
 }
 
 .nav-link a {
@@ -92,16 +92,16 @@ body {
   padding: 0.5rem 1rem;
   transition: color 0.3s ease, background-color 0.3s ease;
   display: flex;
-  align-items: center; /* Vertically center the content */
+  align-items: center;
 }
 
 .nav-link a:hover {
-  color: #007BFF; /* Primary color on hover */
-  background-color: rgba(0, 123, 255, 0.1); /* Subtle background on hover */
+  color: #007BFF;
+  background-color: rgba(0, 123, 255, 0.1);
   border-radius: 4px;
 }
 
-/* Dropdown Menu Styles */
+
 .services:hover .drop-down {
   opacity: 1;
   visibility: visible;
@@ -122,18 +122,18 @@ body {
   opacity: 0;
   visibility: hidden;
   z-index: 1000;
-  list-style: none; /* Remove bullets from dropdown */
+  list-style: none;
 }
 
 .drop-down li {
   padding: 0.75rem 1rem;
   cursor: pointer;
   transition: background 0.3s ease, color 0.3s ease;
-  list-style: none; /* Ensure no bullets */
+  list-style: none;
 }
 
 .drop-down li a {
-  color: inherit; /* Inherit text color */
+  color: inherit;
   text-decoration: none;
   display: block;
 }
@@ -143,7 +143,7 @@ body {
   border-radius: 4px;
 }
 
-/* Dropdown Icon */
+
 .dropdown-icon {
   margin-left: 0.25rem;
   transition: transform 0.3s ease;
@@ -153,14 +153,14 @@ body {
   transform: rotate(180deg);
 }
 
-/* ===================== */
-/* Hero Section Styles */
-/* ===================== */
+
+
+
 .hero {
-    background: url('../hero2.jpg') no-repeat center center; /* Replace with your hero image */
-    background-size: cover; /* Ensures the image covers the entire section */
+    background: url('../hero2.jpg') no-repeat center center;
+    background-size: cover;
     width: 100%;
-    height: 80vh; /* Adjust height as needed */
+    height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -176,7 +176,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Overlay for better text readability */
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
 
@@ -210,9 +210,9 @@ body {
     background-color: #007BFF;
 }
 
-/* ===================== */
-/* Features Section Styles */
-/* ===================== */
+
+
+
 .features {
     background: #ffffff;
     padding: 4rem 2rem;
@@ -264,9 +264,9 @@ body {
     color: #666666;
 }
 
-/* ===================== */
-/* About Section Styles */
-/* ===================== */
+
+
+
 .about {
     background: #f0f0f0;
     padding: 4rem 2rem;
@@ -303,17 +303,11 @@ body {
     line-height: 1.6;
     margin-bottom: 2rem;
 }
-/*
-.about-logo {
-    width: 50px; /* Adjust size as needed 
-    height: 120px;
-    margin-top: 1rem;
-}
-*/
 
-/* ===================== */
-/* Testimonials Section Styles */
-/* ===================== */
+
+
+
+
 .testimonials {
     background: #ffffff;
     padding: 4rem 2rem;
@@ -361,9 +355,9 @@ body {
     text-align: right;
 }
 
-/* ===================== */
-/* Footer Styles */
-/* ===================== */
+
+
+
 .footer {
     background: #222222;
     color: #ffffff;
@@ -384,7 +378,7 @@ body {
 }
 
 .footer-logo {
-    width: 150px; /* Adjust size as needed */
+    width: 150px;
     height: auto;
 }
 
@@ -471,16 +465,16 @@ body {
     text-align: center;
 }
 
-/* ===================== */
-/* Responsive Design */
-/* ===================== */
+
+
+
 @media (max-width: 768px) {
-    /* Show hamburger on smaller screens */
+
     .hamburger {
         display: block;
     }
 
-    /* Hide navigation links by default on smaller screens */
+
     .nav-links {
         position: absolute;
         top: 100%;
@@ -495,15 +489,15 @@ body {
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.3s ease;
-        list-style: none; /* Remove bullets from mobile menu */
+        list-style: none;
     }
 
-    /* Show navigation links when active */
+
     .nav-links.active {
-        max-height: 500px; /* Arbitrary large value to allow the menu to expand */
+        max-height: 500px;
     }
 
-    /* Adjust dropdown positioning for mobile */
+
     .drop-down {
         position: static;
         transform: translateY(0);
@@ -511,25 +505,25 @@ body {
         border-radius: 0;
         margin-top: 0;
         min-width: 100%;
-        list-style: none; /* Remove bullets */
+        list-style: none;
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.3s ease, opacity 0.3s ease;
     }
 
-    /* Show dropdown when active */
+
     .services.active .drop-down {
-        max-height: 300px; /* Arbitrary large value to allow the dropdown to expand */
+        max-height: 300px;
         opacity: 1;
         visibility: visible;
     }
 
-    /* Adjust dropdown icon rotation for mobile */
+
     .services.active .dropdown-icon {
         transform: rotate(180deg);
     }
 
-    /* Ensure "Каталог" aligns with other links */
+
     .nav-links .nav-link {
         width: 100%;
         text-align: center;
@@ -542,7 +536,7 @@ body {
         border-radius: 0;
     }
 
-    /* Adjust Hero Section for Mobile */
+
     .hero {
         height: 60vh;
     }
@@ -585,9 +579,9 @@ body {
     }
 }
 
-/* ===================== */
-/* Focus Styles for Accessibility */
-/* ===================== */
+
+
+
 .footer-links a:focus,
 .footer-social a:focus,
 .nav-link a:focus,
