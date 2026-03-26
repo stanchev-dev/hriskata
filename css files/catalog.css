@@ -482,6 +482,41 @@
     outline: none;
 }
 
+.scroll-to-top-btn {
+    position: fixed;
+    right: 1.25rem;
+    bottom: 1.25rem;
+    z-index: 1200;
+    border: none;
+    border-radius: 999px;
+    padding: 0.75rem 1rem;
+    background-color: #0370af;
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.2s ease, transform 0.2s ease, background-color 0.2s ease;
+}
+
+.scroll-to-top-btn.is-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.scroll-to-top-btn:hover {
+    background-color: #025a8d;
+}
+
+.scroll-to-top-btn:focus-visible {
+    outline: 3px solid #9ed0f5;
+    outline-offset: 2px;
+}
+
 
   @media (max-width: 768px) {
     /* Show hamburger on smaller screens */
@@ -588,5 +623,12 @@
 
     .footer-newsletter button {
         width: 150px;
+    }
+
+    .scroll-to-top-btn {
+        right: 1rem;
+        bottom: 1rem;
+        padding: 0.65rem 0.9rem;
+        font-size: 0.9rem;
     }
 }

@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const searchInput = document.getElementById('search-input');
     const productCards = document.querySelectorAll('.catalog-container .product-card');
     const catalogContainer = document.querySelector('.catalog-container');
+    const scrollToTopButton = document.getElementById('scroll-to-top-btn');
 
     const goToCheckout = (product) => {
         localStorage.setItem(CHECKOUT_STORAGE_KEY, JSON.stringify(product));
@@ -64,6 +65,20 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             noResultsMessage.style.display = found ? 'none' : 'block';
+        });
+    }
+
+    if (scrollToTopButton) {
+        const toggleScrollButton = () => {
+            const shouldShow = window.scrollY > 350;
+            scrollToTopButton.classList.toggle('is-visible', shouldShow);
+        };
+
+        window.addEventListener('scroll', toggleScrollButton);
+        toggleScrollButton();
+
+        scrollToTopButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     }
 });
