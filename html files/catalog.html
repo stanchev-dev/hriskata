@@ -61,18 +61,17 @@
 
         <section class="catalog">
             <h2>Нашите Продукти</h2>
-            <nav class="catalog-subnav" aria-label="Подраздели на каталога">
-                <a href="#section-mtb">Планински велосипеди</a>
-                <a href="#section-racing-sport">Състезателни и спортни велосипеди</a>
-                <a href="#section-triathlon">Триатлон велосипеди</a>
-                <a href="#section-electric">Електрически велосипеди</a>
-                <a href="#section-kids">Детски велосипеди</a>
-                <a href="#section-accessories">Велоаксесоари и безопасност</a>
+            <nav class="catalog-subnav" aria-label="Категории в каталога">
+                <button type="button" class="catalog-filter is-active" data-filter="all">Всички продукти</button>
+                <button type="button" class="catalog-filter" data-filter="mtb">Планински велосипеди</button>
+                <button type="button" class="catalog-filter" data-filter="racing-sport">Състезателни и спортни велосипеди</button>
+                <button type="button" class="catalog-filter" data-filter="triathlon">Триатлон велосипеди</button>
+                <button type="button" class="catalog-filter" data-filter="electric">Електрически велосипеди</button>
+                <button type="button" class="catalog-filter" data-filter="kids">Детски велосипеди</button>
+                <button type="button" class="catalog-filter" data-filter="accessories">Велоаксесоари и безопасност</button>
             </nav>
             <div class="catalog-container">
-                <h3 id="section-mtb" class="catalog-section-title">1. Планински велосипеди</h3>
-
-                <div class="product-card" data-id="product1">
+                <div class="product-card" data-id="product1" data-category="mtb">
                     <img src="../kolelo1-removebg-preview.png" alt="Планинско колело Graphite Grey" class="product-image">
                     <h3 class="product-name">Планинско колело Graphite Grey</h3>
                     <p class="product-price">Цена: 11000 евро
@@ -87,7 +86,7 @@
                     <button class="buy-btn" aria-label="Купи планинско колело Graphite Grey">Купи</button>
                 </div>
 
-                <div class="product-card" data-id="product2">
+                <div class="product-card" data-id="product2" data-category="mtb">
                     <img src="../kolelo2.png" alt="Планинско колело в Matte Sedona Red" class="product-image">
                     <h3 class="product-name">Планинско колело Matte Sedona Red</h3>
                     <p class="product-price">Цена: 10000 евро<br>№: ARTA002</br></p>
@@ -100,9 +99,7 @@
                     <button class="buy-btn" aria-label="Купи Планинско колело в Matte Sedona Red">Купи</button>
                 </div>
 
-                <h3 id="section-racing-sport" class="catalog-section-title">2. Състезателни и спортни велосипеди</h3>
-
-                <div class="product-card" data-id="product5">
+                <div class="product-card" data-id="product5" data-category="racing-sport">
                     <img src="../kolelo3.png" alt="Състезателно колело Mercury 2025" class="product-image">
                     <h3 class="product-name">Състезателно колело Mercury 2025</h3>
                     <p class="product-price">Цена: 8000 евро<br>№: ARTA005</br></p>
@@ -115,7 +112,7 @@
                     <button class="buy-btn" aria-label="Състезателно колело Mercury 2025">Купи</button>
                 </div>
 
-                <div class="product-card" data-id="product6">
+                <div class="product-card" data-id="product6" data-category="racing-sport">
                     <img src="../kolelo4.png" alt="Състезателно колело Mars Dust 2025" class="product-image">
                     <h3 class="product-name">Състезателно колело Mars Dust 2025</h3>
                     <p class="product-price">Цена: 5000 евро<br>№: ARTA006</br></p>
@@ -128,7 +125,7 @@
                     <button class="buy-btn" aria-label="Състезателно колело Mars Dust 2025">Купи</button>
                 </div>
 
-                <div class="product-card" data-id="product11">
+                <div class="product-card" data-id="product11" data-category="racing-sport">
                     <img src="../kolelo7.png" alt="Спортно колело Cobalt 2024" class="product-image">
                     <h3 class="product-name">Спортно колело Cobalt 2024</h3>
                     <p class="product-price">Цена: 5000 евро<br>№: ARTA011</br></p>
@@ -141,7 +138,7 @@
                     <button class="buy-btn" aria-label="Спортно колело Cobalt 2024">Купи</button>
                 </div>
 
-                <div class="product-card" data-id="product12">
+                <div class="product-card" data-id="product12" data-category="racing-sport">
                     <img src="../kolelo8.png" alt="Спортно колело Gecko Phaze 2026" class="product-image">
                     <h3 class="product-name">Спортно колело Gecko Phaze 2026"</h3>
                     <p class="product-price">Цена: 9000 евро<br>№: ARTA012</br></p>
@@ -154,9 +151,7 @@
                     <button class="buy-btn" aria-label="Спортно колело Gecko Phaze 2026">Купи</button>
                 </div>
 
-                <h3 id="section-triathlon" class="catalog-section-title">3. Триатлон велосипеди</h3>
-
-                <div class="product-card" data-id="product7">
+                <div class="product-card" data-id="product7" data-category="triathlon">
                     <img src="../kolelo5.png" alt="Триатлон колело Nebula White 2026" class="product-image">
                     <h3 class="product-name">Триатлон колело Nebula White 2026</h3>
                     <p class="product-price">Цена: 14000 евро<br>№: ARTA007</br></p>
@@ -169,7 +164,7 @@
                     <button class="buy-btn" aria-label="Триатлон колело Nebula White 2026">Купи</button>
                 </div>
 
-                <div class="product-card" data-id="product8">
+                <div class="product-card" data-id="product8" data-category="triathlon">
                     <img src="../kolelo6.png" alt="Триатлон колело Cool White 2026" class="product-image">
                     <h3 class="product-name">Триатлон колело Cool White 2026</h3>
                     <p class="product-price">Цена: 13000 евро<br>№: ARTA008</br></p>
@@ -182,9 +177,7 @@
                     <button class="buy-btn" aria-label="Триатлон колело Cool White 2026">Купи</button>
                 </div>
 
-                <h3 id="section-electric" class="catalog-section-title">4. Електрически велосипеди</h3>
-
-                <div class="product-card" data-id="product13">
+                <div class="product-card" data-id="product13" data-category="electric">
                     <img src="../kolelo9.png" alt="Електрически сгъваем велосипед Reflex 2025" class="product-image">
                     <h3 class="product-name">Електрически сгъваем велосипед Reflex 2025</h3>
                     <p class="product-price">Цена: 7000 евро<br>№: ARTA013</br></p>
@@ -197,7 +190,7 @@
                     <button class="buy-btn" aria-label="Електрически сгъваем велосипед Reflex 2025">Купи</button>
                 </div>
 
-                <div class="product-card" data-id="product14">
+                <div class="product-card" data-id="product14" data-category="electric">
                     <img src="../kolelo10.png" alt="Електрически сгъваем велосипед Matt Black 2025" class="product-image">
                     <h3 class="product-name">Електрически сгъваем велосипед Matt Black</h3>
                     <p class="product-price">Цена: 6000 евро<br>№: ARTA014</br></p>
@@ -210,9 +203,7 @@
                     <button class="buy-btn" aria-label="Електрически сгъваем велосипед Matt Black 2025">Купи</button>
                 </div>
 
-                <h3 id="section-kids" class="catalog-section-title">5. Детски велосипеди</h3>
-
-                <div class="product-card" data-id="product17">
+                <div class="product-card" data-id="product17" data-category="kids">
                     <img src="../kolelo11.png" alt="Детско баланс колело Early Rider SUPER VELIO" class="product-image">
                     <h3 class="product-name">Детско баланс колело Early Rider SUPER VELIO</h3>
                     <p class="product-price">Цена: 400 евро<br>№: ARTA017</br></p>
@@ -225,7 +216,7 @@
                     <button class="buy-btn" aria-label="Детско баланс колело Early Rider SUPER VELIO">Купи</button>
                 </div>
 
-                <div class="product-card" data-id="product18">
+                <div class="product-card" data-id="product18" data-category="kids">
                     <img src="../kolelo12.png" alt="Детско баланс колело Puky NEXT Set" class="product-image">
                     <h3 class="product-name">Детско баланс колело Puky NEXT Set</h3>
                     <p class="product-price">Цена: 300 евро<br>№: ARTA018</br></p>
@@ -238,9 +229,7 @@
                     <button class="buy-btn" aria-label="Детско баланс колело Puky NEXT Set">Купи</button>
                 </div>
 
-                <h3 id="section-accessories" class="catalog-section-title">6. Велоаксесоари и безопасност</h3>
-
-                <div class="product-card" data-id="product3">
+                <div class="product-card" data-id="product3" data-category="accessories">
                     <img src="../fener1.png" alt="Велосипедни светлини SIGMA Aura 80 USB / Blaze" class="product-image">
                     <h3 class="product-name">Велосипедни светлини SIGMA Aura 80 USB</h3>
                     <p class="product-price">Цена: 99 евро<br>№: ARTA003</br></p>
@@ -253,7 +242,7 @@
                     <button class="buy-btn" aria-label="Велосипедни светлини SIGMA Aura 80 USB / Blaze">Купи</button>
                 </div>
 
-                <div class="product-card" data-id="product4">
+                <div class="product-card" data-id="product4" data-category="accessories">
                     <img src="../fener2.png" alt="Велосипедна светлина Еzyne Macro 500+ Reverse Loaded Kit" class="product-image">
                     <h3 class="product-name">Велосипедна светлина Еzyne Macro 500</h3>
                     <p class="product-price">Цена: 85 евро<br>№: ARTA004</br></p>
@@ -266,7 +255,7 @@
                     <button class="buy-btn" aria-label="Велосипедна светлина Еzyne Macro 500+ Reverse Loaded Kit">Купи</button>
                 </div>
 
-                <div class="product-card" data-id="product9">
+                <div class="product-card" data-id="product9" data-category="accessories">
                     <img src="../locker1.png" alt="Велосипедна заключалка с кабел Trelock U5" class="product-image">
                     <h3 class="product-name">Велосипедна заключалка с кабел</h3>
                     <p class="product-price">Цена: 80 евро<br>№: ARTA009</br></p>
@@ -279,7 +268,7 @@
                     <button class="buy-btn" aria-label="Велосипедна заключалка с кабел Trelock U5">Купи</button>
                 </div>
 
-                <div class="product-card" data-id="product10">
+                <div class="product-card" data-id="product10" data-category="accessories">
                     <img src="../locker2.png" alt="Велосипедна заключалка U-образна" class="product-image">
                     <h3 class="product-name">Велосипедна заключалка U-образна</h3>
                     <p class="product-price">Цена: 150 евро<br>№: ARTA010</br></p>
@@ -292,7 +281,7 @@
                     <button class="buy-btn" aria-label="Велосипедна заключалка U-образна">Купи</button>
                 </div>
 
-                <div class="product-card" data-id="product15">
+                <div class="product-card" data-id="product15" data-category="accessories">
                     <img src="../gps1.png" alt="Велосипеден компютър Garmin Edge 1050 – GPS" class="product-image">
                     <h3 class="product-name">Велосипеден компютър Garmin Edge</h3>
                     <p class="product-price">Цена: 1000 евро<br>№: ARTA015</br></p>
@@ -305,7 +294,7 @@
                     <button class="buy-btn" aria-label="Велосипеден компютър Garmin Edge 1050 – GPS">Купи</button>
                 </div>
 
-                <div class="product-card" data-id="product16">
+                <div class="product-card" data-id="product16" data-category="accessories">
                     <img src="../pump1.png" alt="Компактна подова помпа SKS Airkompressor Compact" class="product-image">
                     <h3 class="product-name">Компактна подова помпа SKS</h3>
                     <p class="product-price">Цена: 130 евро<br>№: ARTA016</br></p>
