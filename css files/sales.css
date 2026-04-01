@@ -188,10 +188,13 @@
     width: 100%;
     margin: 0 auto;
   }
-  canvas {
+  .sales-chart-image {
     display: block;
-    max-width: 100%;
+    width: 100%;
+    max-width: 760px;
     height: auto;
+    margin: 0 auto;
+    object-fit: contain;
   }
   .chart-analysis {
     max-width: 800px;
