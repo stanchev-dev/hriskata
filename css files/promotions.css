@@ -225,7 +225,7 @@ main {
 .badge {
     position: absolute;
     top: 15px;
-    left: 15px;
+    right: 15px;
     background-color: #ff4d4d;
     color: #ffffff;
     padding: 0.3rem 0.6rem;
