@@ -24,7 +24,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     quantityInput.value = '1';
                 }
             }
-
+ if (quantity > 5) {
+    alert('Няма наличност за повече от 5 броя.');
+    return;
+}
             const product = {
                 id: productCard.dataset.id,
                 name: productCard.querySelector('.product-name')?.textContent.trim() ?? '',
