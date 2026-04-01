@@ -10,7 +10,6 @@
    
     <link rel="icon" href="../Title (1).png" type="image/x-icon">
     <meta name="description" content="CROSS BMX - Вашият най-добър футболен магазин с широка гама от продукти и услуги.">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -59,7 +58,7 @@
   <main>
     <h2>Продажби за 2025</h2>
     <div class="chart-container">
-      <canvas id="salesChart"></canvas>
+      <img class="sales-chart-image" src="../images/prodazhbi-grafika.png" alt="Графика на годишните продажби за 2025 година">
     </div>
     <section class="chart-analysis">
         <h3>Анализ на продажбите</h3>
@@ -101,37 +100,6 @@
 </footer>
 
   
-  <script>
-    const ctx = document.getElementById('salesChart').getContext('2d');
-    const salesChart = new Chart(ctx, {
-      type: 'line',
-      data: {
-        labels: ['Януари', 'Февруари', 'Март', 'Април', 'Май', 'Юни', 'Юли', 'Август', 'Септември', 'Октомври', 'Ноември', 'Декември'],
-        datasets: [{
-          label: 'Годишни продажби (в евро)',
-          data: [15000, 18000, 21000, 25000, 30000, 35000, 40000, 45000, 50000, 55000, 60000, 70000],
-          borderColor: 'rgba(75, 192, 192, 1)',
-          backgroundColor: 'rgba(75, 192, 192, 0.2)',
-          fill: true,
-          tension: 0.3,
-          pointRadius: 5,
-          pointBackgroundColor: 'rgba(75, 192, 192, 1)'
-        }]
-      },
-      options: {
-        responsive: true,
-        scales: {
-          y: {
-            beginAtZero: true,
-            ticks: {
-              callback: function(value) {
-                return value + ' евро';
-              }
-            }
-          }
-        }
-      }    });
-  </script>
         <script src="../js files/navbar.js"></script>
         <script src="https://kit.fontawesome.com/c0669ad8a0.js" crossorigin="anonymous"></script>
 </body>
